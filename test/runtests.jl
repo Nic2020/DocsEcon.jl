@@ -29,4 +29,8 @@ end
     include(joinpath("..", "src", "Tutorials", "3.US_SW07", "main.jl"))
 end
 
+@testset "FRB-US" begin
+    include(joinpath("..", "src", "Tutorials", "4.FRB-US", "main.jl"))
+end
+
 @info "All done."

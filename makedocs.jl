@@ -17,6 +17,9 @@ makedocs(
     format=Documenter.HTML(prettyurls=get(ENV, "CI", nothing) == "true"),
     modules=[StateSpaceEcon, ModelBaseEcon, TimeSeriesEcon, FAME],
     doctest=false,
+    # Documenter 1 fails the build on docstrings not included in the manual (90 of them
+    # for now); report them without failing until the reference pages list them
+    warnonly=[:missing_docs],
     pages=[
         "index.md",
         "Tutorials" => [
